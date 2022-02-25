@@ -1,0 +1,640 @@
+/*GENERAL*/
+* {
+  padding: 0;
+  margin: 0; }
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  src: url(https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab#standard-styles); }
+
+/*Mapas*/
+.facebook-border {
+  border: blue 1px solid;
+  padding: 2px 2px 2px 2px; }
+
+.instagram-border {
+  border: purple 1px solid;
+  padding: 2px 2px 2px 2px; }
+
+.productos-border {
+  border: grey 1px solid;
+  padding: 2px 2px 2px 2px; }
+
+.provedores-border {
+  border: black 1px solid;
+  padding: 2px 2px 2px 2px; }
+
+/*Fin mapa*/
+/*ANIMACIONES*/
+.tituloAnimado {
+  animation-name: titulo;
+  animation-iteration-count: 1;
+  animation-duration: 3s; }
+
+@keyframes titulo {
+  0% {
+    transform: translate(-1000px);
+    opacity: 0; }
+  100% {
+    transform: translate(0px);
+    opacity: 1; } }
+
+.imagenAnimada {
+  animation-name: imagen;
+  animation-iteration-count: 1;
+  animation-duration: 3s; }
+
+@keyframes imagen {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
+/*Dekstop*/
+.border {
+  border: black;
+  border-style: solid;
+  border-width: 1px; }
+
+/*ASPECTOS GENERALES*/
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #bababa; }
+  body header {
+    grid-area: cabeza;
+    height: 70px;
+    margin-bottom: 5px;
+    background-color: red; }
+    body header h1 {
+      color: yellow;
+      font-family: 'Roboto', sans-serif; }
+  body h2 {
+    text-align: center;
+    margin-top: 10px;
+    color: wheat;
+    font-family: 'Roboto', sans-serif; }
+  body h4 {
+    color: yellow;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; }
+  body footer {
+    grid-area: pie;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: red; }
+
+article {
+  width: 350px;
+  height: 400px; }
+  article p {
+    text-align: center; }
+    article p span {
+      display: block; }
+
+li {
+  color: honeydew; }
+
+p {
+  font-family: 'Roboto Slab', serif;
+  color: honeydew; }
+  p span {
+    display: block; }
+
+a {
+  font-family: 'Roboto Slab', serif;
+  text-decoration: none;
+  color: goldenrod;
+  font-weight: bold; }
+  a:hover {
+    color: blue;
+    text-decoration: underline; }
+
+section article:hover {
+  border: 1px solid black; }
+
+.link:hover {
+  color: blue;
+  text-decoration: underline; }
+
+/*Barra de navegacion*/
+.menu {
+  display: flex;
+  margin-right: 200px;
+  margin-left: 20px;
+  justify-content: space-between;
+  align-content: space-between; }
+  .menu .menuItem {
+    display: flex;
+    width: 100px;
+    height: 30px;
+    text-align: center; }
+
+/*Footer*/
+.footer_flex {
+  display: flex;
+  justify-content: space-between; }
+  .footer_flex .footer_img {
+    width: 50px;
+    height: 50px; }
+
+/*INDEX*/
+.gridIndex {
+  display: grid;
+  grid-template-areas: "cabeza" "cuerpo" "brazo" "pierna" "pie"; }
+
+.carrusel {
+  grid-area: cuerpo;
+  margin-bottom: 5px; }
+  .carrusel .carrusel_imagenes {
+    width: 100%;
+    height: 100vh; }
+
+.elegirnos {
+  grid-area: brazo;
+  margin-bottom: 5px;
+  background-image: linear-gradient(red, goldenrod); }
+
+.aleatorios {
+  grid-area: pierna;
+  margin-bottom: 5px;
+  background-image: linear-gradient(to top, red, goldenrod); }
+
+.elegirnos_carta {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: center;
+  padding-left: 50px; }
+  .elegirnos_carta .elegirnos_articulos {
+    margin-right: 80px;
+    margin-top: 15px; }
+
+.aleatorio_carta {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: center;
+  padding-left: 20px; }
+  .aleatorio_carta .aleatorio_articulos {
+    width: 400px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px; }
+
+.elegirnos_img {
+  width: 350px;
+  height: 350px;
+  padding-left: 25px; }
+
+/*PRODUCTOS*/
+.gridProductos {
+  grid-template-areas: "cabeza" "secu" "pagos" "pollo" "cerdo" "vaca" "pie"; }
+
+/*Menu secundario*/
+.secu {
+  grid-area: secu;
+  background-color: red;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 50px; }
+  .secu .menuSecundario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .secu .menuSecundario .menuSecundario_item {
+      text-align: center;
+      width: 70px; }
+
+.pagos {
+  grid-area: pagos;
+  background-image: linear-gradient(red, goldenrod);
+  margin-bottom: 5px; }
+
+.pagos_flex {
+  display: flex; }
+  .pagos_flex .img_pago {
+    width: 40%;
+    height: 150px; }
+
+.pollos {
+  grid-area: pollo;
+  background-color: goldenrod;
+  margin-bottom: 5px; }
+
+.cerdos {
+  grid-area: cerdo;
+  background-color: goldenrod;
+  margin-bottom: 5px; }
+
+.vacas {
+  grid-area: vaca;
+  background-image: linear-gradient(to top, red, goldenrod);
+  margin-bottom: 5px; }
+
+.img_flex {
+  display: flex;
+  margin-bottom: 5px;
+  padding-left: 25px; }
+  .img_flex .caja_articulos {
+    margin-right: 50px;
+    margin-left: 35px;
+    margin-top: 15px; }
+    .img_flex .caja_articulos .articulo_img {
+      width: 350px;
+      height: 350px; }
+
+/*RECETAS*/
+.gridRecetas {
+  grid-template-areas: "cabeza" "receta1" "receta2" "pie"; }
+
+/*EXTENDS*/
+.receta1, .receta2 {
+  grid-area: receta1;
+  background-image: linear-gradient(red, goldenrod);
+  margin-top: 5px;
+  padding-left: 20px; }
+
+.receta2 {
+  grid-area: receta2;
+  background-image: linear-gradient(to top, red, goldenrod); }
+
+/*Fin de extends*/
+.recetas_img {
+  width: 1000px;
+  height: 500px;
+  height: 500px;
+  width: 1000px;
+  margin-left: 180px; }
+
+/*NOSOTROS*/
+.gridNosotros {
+  grid-template-areas: "cabeza" "nosotros" "producto" "calidad" "pie"; }
+
+.Historia {
+  grid-area: nosotros;
+  background-image: linear-gradient(red, goldenrod); }
+
+.Productos {
+  grid-area: producto;
+  background-color: goldenrod;
+  margin-top: 5px; }
+
+.Calidad {
+  grid-area: calidad;
+  background-image: linear-gradient(to top, red, goldenrod);
+  margin-top: 5px; }
+
+.nosotros_flex {
+  display: flex;
+  justify-content: space-between; }
+
+.img_nosotros {
+  width: 50%;
+  height: 500px;
+  width: 50%;
+  height: 500px; }
+
+/*CONTACTO*/
+.gridContacto {
+  grid-template-areas: "cabeza" "contacto" "formulario" "pie"; }
+
+.contacto {
+  grid-area: contacto;
+  justify-content: center;
+  background-image: linear-gradient(red, goldenrod);
+  margin-top: 5px; }
+  .contacto .contacto_flex {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .contacto .contacto_flex .mapa {
+      width: 600px;
+      height: 450px;
+      width: 600px;
+      height: 450px; }
+
+.form {
+  grid-area: formulario;
+  background-image: linear-gradient(to top, red, goldenrod);
+  margin-top: 5px; }
+  .form .formulario {
+    width: 450px;
+    position: relative;
+    left: 34.5%;
+    text-align: center;
+    background-color: #272727;
+    color: blanchedalmond;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .form .formulario .contenedores__parrafo {
+      width: 500px;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .form .formulario .contenedores__cajas {
+      margin: 10px;
+      width: 400px;
+      height: 30px; }
+    .form .formulario .consulta {
+      margin: 20px;
+      width: 400px;
+      height: 200px; }
+    .form .formulario .boton {
+      width: 80%;
+      position: relative;
+      bottom: 5px;
+      background-color: red;
+      position: relative;
+      left: 1%; }
+
+/*PROVEDORES*/
+.contenedores {
+  background-image: linear-gradient(red, goldenrod, red);
+  padding-left: 40px; }
+  .contenedores .contenedores__provedores {
+    width: 400px;
+    height: 400px;
+    padding: 5px 5px 5px 5px; }
+
+@media screen and (max-width: 480px) {
+  * {
+    padding: 0;
+    margin: 0; }
+  /*ANIMACIONES*/
+  .tituloAnimado {
+    animation-name: titulo;
+    animation-iteration-count: 1;
+    animation-duration: 3s; }
+  @keyframes titulo {
+    0% {
+      transform: translate(-400px);
+      opacity: 0; }
+    100% {
+      transform: translate(0px);
+      opacity: 1; } }
+  .imagenAnimada {
+    animation-name: imagen;
+    animation-iteration-count: 1;
+    animation-duration: 3s; }
+  @keyframes imagen {
+    0% {
+      opacity: 0; }
+    50% {
+      opacity: 0.5; }
+    100% {
+      opacity: 1; } }
+  /*General*/
+  .border {
+    border: black;
+    border-style: solid;
+    border-width: 1px; }
+  body {
+    width: 100%;
+    height: 100vh;
+    background-color: #bababa; }
+    body header {
+      height: 300px; }
+      body header h1 {
+        color: yellow;
+        font-family: 'Roboto', sans-serif;
+        text-align: center; }
+    body h2 {
+      text-align: center;
+      margin-top: 10px;
+      color: wheat;
+      font-family: 'Roboto', sans-serif; }
+    body h4 {
+      color: yellow;
+      text-align: center;
+      font-family: 'Roboto', sans-serif; }
+  header {
+    grid-area: cabeza;
+    width: 100%;
+    background-color: red;
+    height: 300px; }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    .menu .menuItem {
+      display: flex;
+      margin-left: 30px;
+      justify-content: center;
+      text-decoration: none;
+      margin-left: 50px;
+      margin-top: 10px;
+      width: 300px;
+      height: 30px;
+      border: #960e0e solid 1px;
+      background-color: #bab6b6; }
+  article {
+    width: 350px;
+    height: 400px; }
+  li {
+    color: honeydew; }
+  p {
+    font-family: 'Roboto Slab', serif;
+    color: honeydew; }
+    p span {
+      display: block; }
+  a {
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: bold; }
+    a:hover {
+      color: blue;
+      text-decoration: underline; }
+  .link:hover {
+    color: blue;
+    text-decoration: underline; }
+  /*INDEX*/
+  .gridIndex {
+    display: grid;
+    grid-template-areas: "cabeza" "cuerpo" "brazo" "pierna" "pie"; }
+  .carrusel {
+    grid-area: cuerpo;
+    margin-bottom: 5px; }
+    .carrusel .carrusel_imagenes {
+      width: 100%;
+      height: 50vh; }
+  .elegirnos {
+    grid-area: brazo;
+    margin-bottom: 5px;
+    background-color: goldenrod; }
+    .elegirnos .elegirnos_carta {
+      width: 450px;
+      display: flex;
+      flex-flow: column;
+      justify-items: center; }
+      .elegirnos .elegirnos_carta .elegirnos_articulos {
+        width: 300px;
+        height: 300px;
+        margin-left: 100px; }
+  .aleatorios {
+    grid-area: pierna;
+    margin-bottom: 5px;
+    background-color: goldenrod; }
+    .aleatorios .aleatorio_carta {
+      display: flex;
+      flex-flow: column;
+      justify-items: center;
+      background-color: goldenrod; }
+      .aleatorios .aleatorio_carta .aleatorio_articulos {
+        width: 300px;
+        height: 300px;
+        margin-left: 110px; }
+  .elegirnos_img {
+    width: 250px;
+    height: 250px; }
+  /*PRODUCTOS*/
+  .gridProductos {
+    display: grid;
+    grid-template-areas: "cabeza" "secu" "pagos" "pollo" "cerdo" "vaca" "pie"; }
+  .secu {
+    grid-area: secu;
+    background-color: red;
+    margin-bottom: 5px; }
+  .pagos {
+    grid-area: pagos;
+    background-color: goldenrod;
+    margin-bottom: 5px; }
+    .pagos .pagos_flex {
+      display: flex; }
+      .pagos .pagos_flex .img_pago {
+        width: 50%;
+        height: 150px;
+        width: 50%;
+        height: 150px; }
+  .pollos {
+    grid-area: pollo;
+    background-color: goldenrod;
+    margin-bottom: 5px; }
+  .cerdos {
+    grid-area: cerdo;
+    background-color: goldenrod;
+    margin-bottom: 5px; }
+  .vacas {
+    grid-area: vaca;
+    background-color: goldenrod;
+    margin-bottom: 5px; }
+  .menuSecundario {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px; }
+    .menuSecundario .menuSecundario_item {
+      text-align: center;
+      width: 70px; }
+  .img_flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .img_flex .caja_articulos {
+      width: 250px;
+      height: 200px;
+      padding-bottom: 50px;
+      margin-left: 50px; }
+      .img_flex .caja_articulos .articulo_img {
+        width: 100%;
+        height: 90%;
+        width: 100%;
+        height: 90%; }
+  /*RECETAS*/
+  .gridRecetas {
+    display: grid;
+    grid-template-areas: "cabeza" "receta1" "receta2" "pie"; }
+  .receta1, .receta2 {
+    grid-area: receta1;
+    background-color: goldenrod;
+    margin-top: 5px;
+    padding-left: 20px; }
+  .receta2 {
+    grid-area: receta2;
+    background-color: goldenrod;
+    margin-top: 5px;
+    padding-left: 20px; }
+  .recetas_img {
+    padding-top: 10px;
+    margin-left: 80px;
+    width: 300px;
+    height: 200px;
+    height: 200px;
+    width: 300px; }
+  /*NOSOTROS*/
+  .gridNosotros {
+    display: grid;
+    grid-template-areas: "cabeza" "nosotros" "producto" "calidad" "pie"; }
+  .Historia {
+    grid-area: nosotros;
+    background-color: goldenrod; }
+  .Productos {
+    grid-area: producto;
+    background-color: goldenrod;
+    margin-top: 5px; }
+  .Calidad {
+    grid-area: calidad;
+    background-color: goldenrod;
+    margin-top: 5px; }
+  .nosotros_flex {
+    display: flex; }
+    .nosotros_flex .img_nosotros {
+      width: 50%;
+      height: 200px;
+      width: 50%;
+      height: 200px; }
+  /*CONTACTOS*/
+  .gridContacto {
+    display: grid;
+    grid-template-areas: "cabeza" "contacto" "formulario" "pie"; }
+  .contacto {
+    grid-area: contacto;
+    justify-content: center;
+    background-color: goldenrod;
+    margin-top: 5px; }
+    .contacto .contacto_flex {
+      display: flex;
+      justify-content: baseline; }
+      .contacto .contacto_flex .mapa {
+        width: 50%;
+        height: 50vh;
+        width: 50%;
+        height: 50vh;
+        padding-bottom: 10px; }
+  .form {
+    width: 100%;
+    grid-area: formulario;
+    background-color: goldenrod;
+    margin-top: 5px; }
+    .form .formulario {
+      text-align: center;
+      width: 400px;
+      background-color: #272727;
+      color: blanchedalmond;
+      margin-right: -100px; }
+      .form .formulario .contenedores__parrafo {
+        width: 500px;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+        .form .formulario .contenedores__parrafo .contenedores__cajas {
+          margin: 10px;
+          width: 300px;
+          height: 30px; }
+        .form .formulario .contenedores__parrafo .consulta {
+          margin: 10px;
+          width: 300px;
+          height: 200px; }
+        .form .formulario .contenedores__parrafo .boton {
+          width: 200px;
+          position: relative;
+          left: 10px;
+          background-color: red; }
+  /*PROVEDORES*/
+  .contenedores {
+    background-color: goldenrod;
+    padding-left: 40px; }
+    .contenedores .contenedores__provedores {
+      width: 300px;
+      height: 300px; } }
